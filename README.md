@@ -1,4 +1,5 @@
 Language : jp | [en](./README_en.md)
+# **[CO2換気アラートデバイスのソースコードはこちら](https://github.com/panasonic-corporation/dio-ventilation-alert)**
 # [Ventilation Alert] M5StickC_SGP30
 M5StickCとSGP30を使って作るCO2換気アラートデバイスの作り方を紹介します。
   
