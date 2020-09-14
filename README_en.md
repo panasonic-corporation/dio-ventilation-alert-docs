@@ -1,4 +1,4 @@
-Language : [jp](./CO2換気アラートデバイスの作り方-%5BM5StickC_SGP30%5D) | en
+Language : [jp](./README.md) | en
 # [Ventilation Alert] M5StickC_SGP30
 How to make a CO2 ventilation alert device using M5StickC and SGP30
   
