@@ -9,7 +9,8 @@ Caution: The device does not measure accurate CO2 concentration since the SGP30 
 
 # How to make it
 
-## [Tutorial Video is also available](https://panasonic.net/design/flf/assets/img/works/dio/ventilation_alert_en.mp4)
+## Tutorial Video is also available
+<a href="https://www.youtube.com/watch?v=azzayRNOW5U"><img width="600px" src="images/howto_en.png"></a>
 
 ## 1. Preparetion
 

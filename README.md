@@ -8,7 +8,8 @@ M5StickCとSGP30を使って作るCO2換気アラートデバイスの作り方�
 
 # 作り方（How to make）
 
-## [作り方動画も公開しています](https://panasonic.co.jp/design/flf/assets/img/works/dio/ventilation_alert.mp4)
+## 作り方動画も公開しています
+<a href="https://www.youtube.com/watch?v=rLuye3YrSfk"><img width="600px" src="images/howto_jp.png"></a>
 
 ## 1 準備
 
