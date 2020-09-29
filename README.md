@@ -1,7 +1,10 @@
 Language : jp | [en](./README_en.md)
-# **[CO2換気アラートデバイスのソースコードはこちら](https://github.com/panasonic-corporation/dio-ventilation-alert)**
-# [Ventilation Alert] M5StickC_SGP30
+# [Ventilation Alert] M5StickC_SGP30 【作り方ドキュメント】
 M5StickCとSGP30を使って作るCO2換気アラートデバイスの作り方を紹介します。
+
+
+**CO2換気アラートデバイスのソースコードは別リポジトリです<br>[https://github.com/panasonic-corporation/dio-ventilation-alert](https://github.com/panasonic-corporation/dio-ventilation-alert)**
+
   
 <strong>注意) 使用するセンサーSGP30はガスセンサーで、空気の汚れなどを示すVOC値を測定し、そこから等価二酸化炭素濃度（eCO2）を計算して出力するものであるため、正確なCO2濃度を計測できるものではありません。温度や湿度によっても影響される上、アルコールなどにも反応するため、あくまでも目安として使用してください。より正確に測定できるCO2センサーを用いた作り方も今後紹介する予定です。</strong> 
 
