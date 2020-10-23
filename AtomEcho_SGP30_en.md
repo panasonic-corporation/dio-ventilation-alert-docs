@@ -1,4 +1,4 @@
-Language : [jp](./README.md) | en
+Language : [jp](./M5StickC_SGP30_jp.md) | en
 # **[Source code for Ventilation Alert Device is HERE](https://github.com/panasonic-corporation/dio-ventilation-alert)**
 # [Ventilation Alert] M5StickC_SGP30
 How to make a CO2 ventilation alert device using M5StickC and SGP30
@@ -20,11 +20,11 @@ Caution: The device does not measure accurate CO2 concentration since the SGP30 
 
 |     | Product name                | Photo |  Retailer link（example）                                                   | Note |
 |:----:|:---------------------|:---:|:----------------------------------------------------------------|:----|
-|  1  | M5StickC              | <img width="100px" src="images/m5stickc.jpg">|[Marutsu online](https://www.marutsu.co.jp/pc/i/1526331/), [SwitchScience](https://www.switch-science.com/catalog/5517/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/K016-C/2221-K016-C-ND/10492141) | |
+|  1  | M5StickC              | <img width="100px" src="images/m5stickc.jpg">|[SwitchScience](https://www.switch-science.com/catalog/5517/), [Marutsu online](https://www.marutsu.co.jp/pc/i/1526331/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/K016-C/2221-K016-C-ND/10492141) | |
 |  2  | USB Cable Type C | <img width="100px" src="images/usb_cable.jpg">|| Included with M5StickC |
-|  3  | M5StickC Speaker Hat  | <img width="100px" src="images/speaker_hat.jpg">|[Marutsu online](https://www.marutsu.co.jp/pc/i/1556456/), [SwitchScience](https://www.switch-science.com/catalog/5754/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/U055/2221-U055-ND/11200926)    ||
-|  4  | GROVE - VOC AND ECO2 GAS SENSOR (SGP30) | <img width="100px" src="images/sgp30.jpg">|[Marutsu online](https://www.marutsu.co.jp/pc/i/31309791/), [Digi-Key](https://www.digikey.com/products/en?mpart=101020512)||
-|  5  | GROVE Cable | <img width="100px" src="images/grove_cable.jpg">||Included with GROVE - VOC AND ECO2 GAS SENSOR (SGP30)|
+|  3  | M5StickC Speaker Hat  | <img width="100px" src="images/speaker_hat.jpg">|[SwitchScience](https://www.switch-science.com/catalog/5754/), [Marutsu online](https://www.marutsu.co.jp/pc/i/1556456/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/U055/2221-U055-ND/11200926)    ||
+|  4  | SGP30 | <img width="100px" src="images/sgp30.jpg">|[SwitchScience](https://www.switch-science.com/catalog/6619/), [Marutsu online](https://www.marutsu.co.jp/pc/i/31309791/), [Digi-Key](https://www.digikey.com/products/en?mpart=101020512)||
+|  5  | GROVE Cable | <img width="100px" src="images/grove_cable.jpg">||Included with SGP30|
 
 #### Required materials
 - Double-sided tape
