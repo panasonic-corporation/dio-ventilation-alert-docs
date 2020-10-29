@@ -65,21 +65,21 @@ https://github.com/panasonic-corporation/doingio-base-docs/blob/master/README.md
 ### 4.1 ”Sketch” → ”Include Library” → ”Manage Libraries” Search "SGP30" and install "Adafruit SGP30 Sensor"  
 ![写真](images/4_sgp30.png)
 
-## 5 ファームウェアのダウンロードと実行
+## 5 Download firmware and execution
 
-### 5.1  ファームウェアのダウンロード
-ファームウェアをダウンロードしてください
+### 5.1  Download firmware
+Download firmware here.
 https://github.com/panasonic-corporation/doingio-ventilation-alert
 ![写真](images/5_firmware_dl.png)
 
-### 5.2 プロジェクトを開く
-フォルダを開き、doingio-ventilation-alert/M5StickC_SGP30/M5StickC_SGP30.ino をダブルクリックしてArduino IDEで開きます。
+### 5.2 Open project
+Double-click doingio-ventilation-alert/M5StickC_SGP30/M5StickC_SGP30.ino and open Arduino IDE.
 
-### 5.4 設定
-M5StickCとPCをUSBケーブルで接続し、Arduino IDEの「ツール」タブを開き下記の通り設定します。
+### 5.4 Configuration
+Connect M5StickC and PC using USB cable, then open "Tools" on Arduino IDE. And configure as shown below.
 ![写真](images/5_setting.png)
 
-### 5.5 書き込み
+### 5.5 Writing
 ![写真](images/5_comp.jpg)
 
 ### 5.6 Rebooting M5StickC
