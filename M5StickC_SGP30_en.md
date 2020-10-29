@@ -1,7 +1,8 @@
 Language : [jp](./M5StickC_SGP30_jp.md) | en
-# **[Source code for Ventilation Alert Device is HERE](https://github.com/panasonic-corporation/dio-ventilation-alert)**
 # [Ventilation Alert] M5StickC_SGP30
 How to make a CO2 ventilation alert device using M5StickC and SGP30
+
+**[Source code for Ventilation Alert Device is HERE](https://github.com/panasonic-corporation/dio-ventilation-alert)**
   
 <strong>
 Caution: The device does not measure accurate CO2 concentration since the SGP30 sensor used for the device is a gas sensor for measuring the VOC value that indicates air quality, and the equivalent carbon dioxide concentration (eCO2) is calculated based on this value. The value may be affected by temperature and humidity, and senses also alcohol and other factors, and the device is for reference purposes only. A recipe for a device with a more accurate CO2 sensor will be coming in the future.
@@ -20,10 +21,10 @@ Caution: The device does not measure accurate CO2 concentration since the SGP30 
 
 |     | Product name                | Photo |  Retailer link（example）                                                   | Note |
 |:----:|:---------------------|:---:|:----------------------------------------------------------------|:----|
-|  1  | M5StickC              | <img width="100px" src="images/m5stickc.jpg">|[SwitchScience](https://www.switch-science.com/catalog/5517/), [Marutsu online](https://www.marutsu.co.jp/pc/i/1526331/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/K016-C/2221-K016-C-ND/10492141) | |
+|  1  | M5StickC              | <img width="100px" src="images/m5stickc.jpg">|[SWITCH SCIENCE](https://www.switch-science.com/catalog/6350/), [Marutsu online](https://www.marutsu.co.jp/pc/i/1526331/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/K016-C/2221-K016-C-ND/10492141) | |
 |  2  | USB Cable Type C | <img width="100px" src="images/usb_cable.jpg">|| Included with M5StickC |
-|  3  | M5StickC Speaker Hat  | <img width="100px" src="images/speaker_hat.jpg">|[SwitchScience](https://www.switch-science.com/catalog/5754/), [Marutsu online](https://www.marutsu.co.jp/pc/i/1556456/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/U055/2221-U055-ND/11200926)    ||
-|  4  | SGP30 | <img width="100px" src="images/sgp30.jpg">|[SwitchScience](https://www.switch-science.com/catalog/6619/), [Marutsu online](https://www.marutsu.co.jp/pc/i/31309791/), [Digi-Key](https://www.digikey.com/products/en?mpart=101020512)||
+|  3  | M5StickC Speaker Hat  | <img width="100px" src="images/speaker_hat.jpg">|[SWITCH SCIENCE](https://www.switch-science.com/catalog/5754/), [Marutsu online](https://www.marutsu.co.jp/pc/i/1556456/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/U055/2221-U055-ND/11200926)    ||
+|  4  | SGP30 | <img width="100px" src="images/sgp30.jpg">|[SWITCH SCIENCE](https://www.switch-science.com/catalog/6619/), [Marutsu online](https://www.marutsu.co.jp/pc/i/31309791/), [Digi-Key](https://www.digikey.com/products/en?mpart=101020512)||
 |  5  | GROVE Cable | <img width="100px" src="images/grove_cable.jpg">||Included with SGP30|
 
 #### Required materials
@@ -55,50 +56,33 @@ Caution: The device does not measure accurate CO2 concentration since the SGP30 
 
 ## 3. Program writing
 
-### 3.1 Install and start M5Burner
-Download [M5Burner](https://m5stack.com/pages/download), install, and start.  
-<https://m5stack.com/pages/download>    
+Install the development enviroment on your PC as shown below.
 
-※ For Mac, M5Burner must be installed in the application folder.
+https://github.com/panasonic-corporation/doingio-base-docs/blob/master/README.md#a-m5stack%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
 
-<img width="800px" src="images/3.1_1_en.png">
+## 4 Download / Install the Libraries
 
+### 4.1 ”Sketch” → ”Include Library” → ”Manage Libraries” Search "SGP30" and install "Adafruit SGP30 Sensor"  
+![写真](images/4_sgp30.png)
 
-### 3.2 Connect the M5StickC to PC
-※ For Windows, driver installation may be necessary.
-If the M5StickC is not recognized, download the driver from the following link:  
-<https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/drivers/CP210x_VCP_Windows.zip>  
-※ For Mac, driver installation is unnecessary.   
-<img width="500px" src="images/3.2.png">
+## 5 ファームウェアのダウンロードと実行
 
-### 3.3 Download binary file
-Download the binary file, [VentilationAlert.zip](https://github.com/panasonic-corporation/do-it-ourselves/releases/download/v1.0.0/VentilationAlert.zip), and save it to an appropriate folder without unzipping it.  
+### 5.1  ファームウェアのダウンロード
+ファームウェアをダウンロードしてください
+https://github.com/panasonic-corporation/doingio-ventilation-alert
+![写真](images/5_firmware_dl.png)
 
-### 3.4 Load the binary file
-Load the downloaded VentilationAlert.zip with M5Burner.  
-Press the “+” button on the top right to open a window.
-<img width="800px" src="images/3.4_1_en.png">  
+### 5.2 プロジェクトを開く
+フォルダを開き、doingio-ventilation-alert/M5StickC_SGP30/M5StickC_SGP30.ino をダブルクリックしてArduino IDEで開きます。
 
-Select VentilationAlert.zip in the pop-up window, and load it to M5Burner.
-<img width="800px" src="images/3.4_2.png">
+### 5.4 設定
+M5StickCとPCをUSBケーブルで接続し、Arduino IDEの「ツール」タブを開き下記の通り設定します。
+![写真](images/5_setting.png)
 
-### 3.5 Write settings
-If it is loaded successfully, the VentilationAlert item will be added to the list on the left. Select it.  
-Then, change the setting of “COM” at the top to “COM-*” for Windows and “/dev/usbserial-******” for Mac.
+### 5.5 書き込み
+![写真](images/5_comp.jpg)
 
-<img width="800px" src="images/3.5_en.png">
-
-### 3.6 Write
-Click “Burn” at the top right to write the program.  
-(Noise from speakers during the writing process is normal.)  
-
-When “Staying in bootloader.” or “Hard resetting vir RTS pin...” appears in the lower right window, writing is completed.  
-
-※ If you accidentally selected “Erase,” burn UIFlow or LovyanLauncher, and then burn VentilationAlert.
-
-<img width="800px" src="images/3.6_en_.png">
-
-### 3.7 Rebooting M5StickC
+### 5.6 Rebooting M5StickC
 Reboot M5StickC when the writing is completed.
 
 
@@ -109,77 +93,33 @@ Press and hold the push switch on the side of the M5 mark for 6 seconds to turn 
 After waiting a few seconds, press and hold the same push switch for 2 seconds to turn on the power.  
 <img width="300px" src="images/3.7_en.jpg">
 
-### 3.8 Operation Check
+### 5.7 Operation Check
 When power is turned on, the M5StickC displays a measured CO2 value.  
 Blow on the sensor, and confirm that the sound and the red LED light on the M5StickC body are activated when the level exceeds 1,000 ppm.  
 <img width="300px" src="images/3.8_1.jpg">  
 <img width="300px" src="images/3.8_2.jpg">
 
-## 4. Make a cover (body)
+## 6. Make a cover (body)
 
-Build your own cover with flexible ideas! <!--Share your cover on Twitter and Instagram with the hashtag #dio_product.-->
+Build your own cover with flexible ideas! 
+
+Share your cover on Twitter and Instagram with the hashtag #dio_product.
+
+Make a cover as shown below.
+
+[How to make a cover](./howto_make_cover_en.md)
 
 <img width="400px" src="images/body_idea.png">
 
-
-There are four sample templates that are easy to make using toilet paper cores.  
-
-| File name | Photo | Difficulty level |
-|-------|-------|-------|
-| [bird.pdf](data/bird.pdf) | <img width="150px" src="images/bird.jpg"> | Medium |
-| [flower.pdf](data/flower.pdf) | <img width="150px" src="images/flower.jpg"> | Easy |
-| [plant.pdf](data/plant.pdf) | <img width="150px" src="images/plant.jpg"> | Easy |
-| [spring.pdf](data/spring.pdf) | <img width="150px" src="images/spring.jpg"> | Easy |
-
-As a sample, here is how to make a bird cover.  
-
-### 4.1
-Download the pdf from the table above, and print it out in actual size on A4 paper.  
-
-<img width="300px" src="images/4.1.jpg">
-
-### 4.2
-Cut along the outer solid lines with scissors. 
-
-<img width="300px" src="images/4.2.jpg">
-
-### 4.3
-Make creases along the dotted lines.  
-
-<img width="300px" src="images/4.3.jpg">
-
-### 4.4
-Put glue on the back side, wrap a toilet paper core with it to attach it.  
-
-<img width="300px" src="images/4.4_1.jpg">
-<img width="300px" src="images/4.4_2.jpg">
-
-### 4.5
-Put glue on the surface of part C, and attach it to the other end to form a tube.  
-
-<img width="300px" src="images/4.5.jpg">
-
-### 4.6
-Fold the top and bottom tabs inward and glue them to the core.  
-
-<img width="300px" src="images/4.6.jpg">
-
-### 4.7
-Cut out parts D and E with scissors. Save the cut-out part D.  
-
-<img width="300px" src="images/4.7.jpg">
-
-### 4.8
-Use a utility knife to make a slit along line F.  
-
-<img width="300px" src="images/4.8.jpg">
-
-### 4.9
-Insert both ends of D into F to make a beak to finish the cover. Place the device inside.  
-
-<img width="300px" src="images/4.9_1.jpg"><br>
-<img width="300px" src="images/4.9_2.jpg">
-
+<br>
+<br>
+<br>
+<br>
+<center><h1>Complete!</h1></center>
+<br>
+<br>
+<br>
+<br>
 
 # How to use
 
@@ -214,24 +154,6 @@ Insert both ends of D into F to make a beak to finish the cover. Place the devic
 # 【For Creators】 Software Improvement and Modification
 The D+IO Project allows users to modify and upgrade the recipes. Use your creativity to update the D+IO PRODUCTS. We look forward to your suggestions for fixing code and making improvements posted on PullRequest and Issue.
 
-### Packaging Method
-How to generate a zip file to burn from M5Burner
-
-#### 1. Create a binary file
-Output a binary file from ArduinoIDE.  
-<img height="200px" src="images/5.1.1.png">
-
-#### 2. Move the file
-Put the generated binary file under “build/firmware,” and change the file name to “firmware_0x10000.bin.“  
-
-#### 3. Compress the file
-Compress the “firmware” folder under “build” and “m5burner.json” together into a zip file, and name the file “VentilationAlert.zip.”  
-
-```
-# sample command
-$ zip -r VentilationAlert.zip firmware m5burner.json
-```
-
 ### About Audio Data
 Convert audio data to wav unsigned 8-bit data, and add a hexadecimal array as a variable. Below are sample commands of a conversion command using ffmpeg, and a command to output a hexadecimal array using xxd.
 
@@ -246,17 +168,3 @@ $ ffmpeg -i input.wav -vn -ac 1 -ar 16000 -acodec pcm_u8 -f wav output.wav
 # sample command
 $ xxd -i output.wav > sample_data
 ```
-
-# FAQ
-
-## M5Burner does not start up
-
-- When a warning such as the following appears on a Mac, try [“Open a Mac app from an unidentified developer.”](https://support.apple.com/ja-jp/guide/mac-help/mh40616/mac)  
-<img width="500px" src="images/3.1_2.png">
-
-## M5Burner does not read VentilationAlert.zip
-
-- Load VentilationAlert.zip without unzipping.
-
-- For Mac, ensure the M5Burner is installed in the application folder.
-

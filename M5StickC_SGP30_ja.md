@@ -1,4 +1,4 @@
-Language : jp | [en](./README_en.md)
+Language : jp | [en](./M5StickC_SGP30_en.md)
 # [Ventilation Alert] M5StickC_SGP30 【作り方ドキュメント】
 M5StickCとSGP30を使って作るCO2換気アラートデバイスの作り方を紹介します。
 
@@ -9,7 +9,7 @@ M5StickCとSGP30を使って作るCO2換気アラートデバイスの作り方�
 <strong>注意) 使用するセンサーSGP30はガスセンサーで、空気の汚れなどを示すVOC値を測定し、そこから等価二酸化炭素濃度（eCO2）を計算して出力するものであるため、正確なCO2濃度を計測できるものではありません。温度や湿度によっても影響される上、アルコールなどにも反応するため、あくまでも目安として使用してください。より正確に測定できるCO2センサーを用いた作り方も今後紹介する予定です。</strong> 
 
 
-# 作り方（How to make）
+# 作り方
 
 ## 作り方動画も公開しています
 <a href="https://www.youtube.com/watch?v=rLuye3YrSfk"><img width="600px" src="images/howto_jp.png"></a>
@@ -22,11 +22,12 @@ M5StickCとSGP30を使って作るCO2換気アラートデバイスの作り方�
 
 |     | 部品名                | 画像 |  販売リンク（例）                                                   | 備考 |
 |:----:|:---------------------|:---:|:----------------------------------------------------------------|:----|
-|  1  | M5StickC              | <img width="100px" src="images/m5stickc.jpg">|[マルツオンライン](https://www.marutsu.co.jp/pc/i/1526331/), [SwitchScience](https://www.switch-science.com/catalog/5517/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/K016-C/2221-K016-C-ND/10492141) | |
+|  1  | M5StickC              | <img width="100px" src="images/m5stickc.jpg">|[スイッチサイエンス](https://www.switch-science.com/catalog/6350/), [マルツオンライン](https://www.marutsu.co.jp/pc/i/1526331/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/K016-C/2221-K016-C-ND/10492141) | |
 |  2  | USB Cable Type C | <img width="100px" src="images/usb_cable.jpg">|| M5StickCに付属 |
-|  3  | M5StickC Speaker Hat  | <img width="100px" src="images/speaker_hat.jpg">|[マルツオンライン](https://www.marutsu.co.jp/pc/i/1556456/), [SwitchScience](https://www.switch-science.com/catalog/5754/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/U055/2221-U055-ND/11200926)    ||
-|  4  | GROVE - VOC AND ECO2 GAS SENSOR (SGP30) | <img width="100px" src="images/sgp30.jpg">|[マルツオンライン](https://www.marutsu.co.jp/pc/i/31309791/), [Digi-Key](https://www.digikey.com/products/en?mpart=101020512)||
+|  3  | M5StickC Speaker Hat  | <img width="100px" src="images/speaker_hat.jpg">|[スイッチサイエンス](https://www.switch-science.com/catalog/5754/), [マルツオンライン](https://www.marutsu.co.jp/pc/i/1556456/), [Digi-Key](https://www.digikey.com/product-detail/en/m5stack-technology-co-ltd/U055/2221-U055-ND/11200926)    ||
+|  4  | GROVE - VOC AND ECO2 GAS SENSOR (SGP30) | <img width="100px" src="images/sgp30.jpg">|[スイッチサイエンス](https://www.switch-science.com/catalog/6619/), [マルツオンライン](https://www.marutsu.co.jp/pc/i/31309791/), [Digi-Key](https://www.digikey.com/products/en?mpart=101020512)||
 |  5  | GROVE Cable | <img width="100px" src="images/grove_cable.jpg">||GROVE - VOC AND ECO2 GAS SENSOR (SGP30)に付属|
+★参考価格（総額） : 3,542円（税込み）
 
 #### 必要な道具
 - 両面テープ
@@ -55,135 +56,73 @@ M5StickCとSGP30を使って作るCO2換気アラートデバイスの作り方�
 ### 2.7 完成
 <img width="300px" src="images/2.7.jpg">
 
-## 3 プログラムの書き込み
+## 3 開発環境のダウンロードとインストール
 
-### 3.1 M5Burnerのインストール、起動
-[M5Burner](https://m5stack.com/pages/download)をダウンロードし、続けてインストール、起動してください。  
-<https://m5stack.com/pages/download>    
+下記リンクを参考に開発環境をインストールしてください。
 
-※ Macの場合は必ずアプリケーションフォルダにM5Burnerをインストールしてください。
+https://github.com/panasonic-corporation/doingio-base-docs/blob/master/README.md#a-m5stack%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
 
-<img width="800px" src="images/3.1_1.png">
+## 4 ライブラリのダウンロードとインストール
 
+### 4.1 ”スケッチ” → ”ライブラリをインクルード” → ”ライブラリを管理”「SGP30」と検索して「Adafruit SGP30 Sensor」をインストール  
+![写真](images/4_sgp30.png)
 
-### 3.2 M5StickCをPCに接続する
-※ Windowsの場合、ドライバのインストールが必要な場合があります。  
-M5StickCを認識しない場合は下記リンクからドライバをインストールしてください。
-<https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/drivers/CP210x_VCP_Windows.zip>  
-※ Macはドライバのインストール不要です。  
-<img width="500px" src="images/3.2.png">
+## 5 ファームウェアのダウンロードと実行
 
-### 3.3 プログラムのバイナリファイルをダウンロード
-プログラムのバイナリファイル[VentilationAlert.zip](https://github.com/panasonic-corporation/do-it-ourselves/releases/download/v1.0.0/VentilationAlert.zip)をダウンロードし、解凍せずに適当なフォルダに保存してください。  
+### 5.1  ファームウェアのダウンロード
+ファームウェアをダウンロードしてください
+https://github.com/panasonic-corporation/doingio-ventilation-alert
+![写真](images/5_firmware_dl.png)
 
-### 3.4 バイナリファイル読み込み
-先ほどダウンロードしたVentilationAlert.zipをM5Burnerで読み込みます。  
-右上の＋ボタンを押して、ウィンドウを開きます。  
-<img width="800px" src="images/3.4_1.png">  
+### 5.2 プロジェクトを開く
+フォルダを開き、doingio-ventilation-alert/M5StickC_SGP30/M5StickC_SGP30.ino をダブルクリックしてArduino IDEで開きます。
 
-出てきたウィンドウからVentilationAlert.zipを選んでM5Burnerに読み込んでください。
-<img width="800px" src="images/3.4_2.png">
+### 5.4 設定
+M5StickCとPCをUSBケーブルで接続し、Arduino IDEの「ツール」タブを開き下記の通り設定します。
+![写真](images/5_setting.png)
 
-### 3.5 書き込み設定
-正常に読み込めたら左のリストにVentilationAlertの項目が追加されるので選択します。  
-また、上部の"COM"の設定を、Windowsの場合"COM-\*"に、Macの場合は"/dev/usbserial-******"に変更してください。  
-<img width="800px" src="images/3.5.png">
+### 5.5 書き込み
+![写真](images/5_comp.jpg)
 
-### 3.6 書き込み
-右上の"Burn"ボタンをクリックしてプログラムを書き込んでください。  
-(書き込み中にスピーカーからノイズ音が発生することがありますが、問題ありません。)  
-
-右下のウィンドウに"Staying in bootloader."もしくは"Hard resetting vir RTS pin..."と表示されたら書き込み完了です。
-
-※ もし間違えて"Erase"を選択してしまった場合は、UIFlowやLovyanLauncherなどをBurnしたあと
-再度VentilationAlertをBurnしてください。
-
-<img width="800px" src="images/3.6.png">
-
-### 3.7 M5StickCの再起動
+### 5.6 M5StickCの再起動
 書き込みが完了したらM5StickCを再起動します。
 
-
 （書き込み完了後に自動的に再起動されたらこのステップは不要です。）  
-
 
 M5マーク側面のプッシュスイッチを6秒長押しして電源をOFFにしてください。  
 その後数秒待ってから、同じプッシュスイッチを2秒長押しして電源をONにしてください。   
 <img width="300px" src="images/3.7_.jpg">
 
-### 3.8 動作確認
+
+### 5.7 動作確認
 電源を入れるとM5StickCのディスプレイにCO2の計測結果が表示されます。  
 センサーに息を吹きかけ、1000ppmを超えると音が鳴り、M5StickC本体のLEDが赤く光ることを確認してください。  
 <img width="300px" src="images/3.8_1.jpg">  
 <img width="300px" src="images/3.8_2.jpg">
 
-## 4. 筐体（ボディー）の製作
 
-筐体は皆さんのアイディアで自由に作ってみましょう！<!--ハッシュタグ #dio_product でTwitterやInstagramなどでどんどんシェアしてください。-->
+## 6. 筐体（ケース）の製作
+ケースは皆さんのアイディアで自由に作ってみましょう！
+
+作ったケースはハッシュタグ #dio_product でTwitterやInstagramなどでどんどんシェアしてください！
+
+下記リンクを参考にケースを作りましょう。
+
+[筐体（ケース）の作り方](./howto_make_cover_ja.md)
 
 <img width="400px" src="images/body_idea.png">
 
+<br>
+<br>
+<br>
+<br>
+<center><h1>完成！</h1></center>
+<br>
+<br>
+<br>
+<br>
 
-サンプルとして、トイレットペーパーの芯を使って簡単に作れる4つのテンプレートを用意しています。
-
-| ファイル名 | 画像 | 難易度 |
-|-------|-------|-------|
-| [bird.pdf](data/bird.pdf) | <img width="150px" src="images/bird.jpg"> | Medium |
-| [flower.pdf](data/flower.pdf) | <img width="150px" src="images/flower.jpg"> | Easy |
-| [plant.pdf](data/plant.pdf) | <img width="150px" src="images/plant.jpg"> | Easy |
-| [spring.pdf](data/spring.pdf) | <img width="150px" src="images/spring.jpg"> | Easy |
-
-ここではサンプルとして、birdの作り方を紹介します。
-
-### 4.1
-上の表からpdfをダウンロードし、A4の紙に等倍で印刷してください。
-
-<img width="300px" src="images/4.1.jpg">
-
-### 4.2
-外側の実線に沿ってハサミで切り取ります。
-
-<img width="300px" src="images/4.2.jpg">
-
-### 4.3
-点線に沿って折り目をつけます。
-
-<img width="300px" src="images/4.3.jpg">
-
-### 4.4
-裏面をのり付けし、トイレットペーパーの芯を包むようにして貼り付けます。
-
-<img width="300px" src="images/4.4_1.jpg">
-<img width="300px" src="images/4.4_2.jpg">
-
-### 4.5
-Cの部分の表面にのり付けし、反対側の端同士を貼り付けて筒状にします。
-
-<img width="300px" src="images/4.5.jpg">
-
-### 4.6
-上下の飛び出た部分を内側に折り込んで貼り付けます。
-
-<img width="300px" src="images/4.6.jpg">
-
-### 4.7
-D、Eの部分をハサミで切り取り、Dの部分は捨てずに残しておいてください。
-
-<img width="300px" src="images/4.7.jpg">
-
-### 4.8
-カッターでFの線に沿って切込みを入れます。
-
-<img width="300px" src="images/4.8.jpg">
-
-### 4.9
-Dの両端部をFに差し込み、くちばしを作ったら完成です。デバイスを中に入れてみましょう。
-
-<img width="300px" src="images/4.9_1.jpg"><br>
-<img width="300px" src="images/4.9_2.jpg">
-
-
-# 使い方(How to use)
+# 使い方
 
 1. 電源を入れる
 
@@ -214,27 +153,11 @@ Dの両端部をFに差し込み、くちばしを作ったら完成です。デ
 
     アラートが連続して再生されないよう、CO2濃度が1,000ppmを超えた後、一度700ppmを下回らない限り再びスピーカーから音が再生されることはありません。 (LEDは700ppmを下回るまで光り続けます。)
 
+
 # 【クリエイター向け】 ソフトウェアの改善、修正
 D+IOプロジェクトではユーザ自身がレシピを修正したり、アップグレードさせることができます。
 あなたのクリエイティブ力でD+IO PRODUCTをアップデートさせていきましょう。
 コードの修正や改善案など、PullRequestやIssueへの投稿をお待ちしています。
-
-### パッケージ化の方法
-M5Burnerから焼き込むためのzipファイルを生成する方法を記載します。
-
-#### 1. バイナリファイル生成
-ArduinoIDEからバイナリファイルを出力します。  
-<img height="200px" src="images/5.1.1.png">
-
-#### 2. ファイル配置
-生成されたバイナリファイルをbuild/firmware以下に配置し、ファイル名を"firmware_0x10000.bin"に変更してください。
-
-#### 3. ファイル圧縮
-build内のfirmwareフォルダとm5burner.jsonをまとめてzipで圧縮し、ファイル名をVentilationAlert.zipとします。
-```
-# コマンド例
-$ zip -r VentilationAlert.zip firmware m5burner.json
-```
 
 ### 音声データについて
 音声データはwavの符号なし8bitデータに変換し、16進数の配列を変数として持たせます。
@@ -251,16 +174,3 @@ $ ffmpeg -i input.wav -vn -ac 1 -ar 16000 -acodec pcm_u8 -f wav output.wav
 # コマンド例
 $ xxd -i output.wav > sample_data
 ```
-
-# FAQ
-
-## M5Burnerが起動できない
-
-- Macで下のような警告が出てきた場合は[「開発元が未確認のMacアプリケーションを開く」](https://support.apple.com/ja-jp/guide/mac-help/mh40616/mac)をお試しください。  
-<img width="500px" src="images/3.1_2.png">
-
-## VentilationAlert.zipがM5Burnerで読み込めない
-
-- VentilationAlert.zipは解凍せずにそのまま読み込んでください。
-
-- Macでは必ずアプリケーションフォルダにM5Burnerをインストールしてください。
