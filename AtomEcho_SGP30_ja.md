@@ -48,7 +48,8 @@ https://github.com/panasonic-corporation/doingio-base-docs/blob/master/README.md
 
 ## 4 ライブラリをダウンロードとインストール
 
-### 4.1 ”スケッチ” → ”ライブラリをインクルード” → ”ライブラリを管理”「SGP30」と検索して「Adafruit SGP30 Sensor」をインストール  
+### 4.1
+”スケッチ” → ”ライブラリをインクルード” → ”ライブラリを管理”「SGP30」と検索して「Adafruit SGP30 Sensor」をインストール  
 ![写真](images/4_sgp30.png)
 
 ## 5 ファームウェアのダウンロードと実行
@@ -61,14 +62,14 @@ https://github.com/panasonic-corporation/doingio-ventilation-alert
 ### 5.2 プロジェクトを開く
 フォルダを開き、doingio-ventilation-alert/AtomEcho_SGP30Unit/AtomEcho_SGP30Unit.ino をダブルクリックしてArduino IDEで開きます。
 
-### 5.4 設定
+### 5.3 設定
 ATOM EchoとPCをUSBケーブルで接続し、Arduino IDEの「ツール」タブを開き下記の通り設定します。
 ![写真](images/5_setting.png)
 
-### 5.5 書き込み
+### 5.4 書き込み
 ![写真](images/5_comp.jpg)
 
-### 5.6 動作確認
+### 5.5 動作確認
 USBケーブルを電源に差すと起動します。
 センサーに息を吹きかけ、本体のLEDが赤く光り音が鳴ることを確認してください。  
 
