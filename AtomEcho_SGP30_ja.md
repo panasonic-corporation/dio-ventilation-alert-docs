@@ -22,6 +22,7 @@ ATOM EchoとSGP30を使って作るCO2換気アラートデバイスの作り方
 |  2  | USB2.0ケーブル（A-Type Cタイプ） | [SwitchScience](https://www.switch-science.com/catalog/3792/) | |
 |  3  | TVOC/eCO2 ガスセンサユニット（SGP30） |[SwitchScience](https://www.switch-science.com/catalog/6619/)||
 |  4  | HY2.0 ケーブル ||TVOC/eCO2 ガスセンサユニット（SGP30）に付属|
+
 ★ 参考価格（総額） : 約2,827円（税込み）
 
 
@@ -122,6 +123,6 @@ USBケーブルを電源に差すと起動します。
 
     アラートが連続して再生されないよう、CO2濃度が1,000ppmを超えた後、一度800ppmを下回らない限り再びスピーカーから音が再生されることはありません。
 
-    LEDは0~599ppmで緑、
-    LEDは600~799ppmで黄色、
+    LEDは0〜599ppmで緑、
+    LEDは600〜799ppmで黄色、
     LEDは800ppm以上で赤 に光ります。
