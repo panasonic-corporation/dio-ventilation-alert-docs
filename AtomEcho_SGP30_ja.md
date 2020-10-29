@@ -18,9 +18,9 @@ ATOM EchoとSGP30を使って作るCO2換気アラートデバイスの作り方
 
 |     | 部品名                |  販売リンク（例）                                                   | 備考 |
 |:----:|:---------------------|:----------------------------------------------------------------|:----|
-|  1  | ATOM Echo              |[SwitchScience](https://www.switch-science.com/catalog/6347/) | |
-|  2  | USB2.0ケーブル（A-Type Cタイプ） | [SwitchScience](https://www.switch-science.com/catalog/3792/) | |
-|  3  | TVOC/eCO2 ガスセンサユニット（SGP30） |[SwitchScience](https://www.switch-science.com/catalog/6619/)||
+|  1  | ATOM Echo              |[スイッチサイエンス](https://www.switch-science.com/catalog/6347/) | |
+|  2  | USB2.0ケーブル（A-Type Cタイプ） | [スイッチサイエンス](https://www.switch-science.com/catalog/3792/) | |
+|  3  | TVOC/eCO2 ガスセンサユニット（SGP30） |[スイッチサイエンス](https://www.switch-science.com/catalog/6619/)||
 |  4  | HY2.0 ケーブル ||TVOC/eCO2 ガスセンサユニット（SGP30）に付属|
 
 ★ 参考価格（総額） : 約2,827円（税込み）
