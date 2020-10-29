@@ -78,7 +78,7 @@ USBケーブルを電源に差すと起動します。
 
 作ったケースはハッシュタグ #dio_product でTwitterやInstagramなどでどんどんシェアしてください！
 
-[筐体（ケース）の作り方](./howto_make_body_ja.md)
+[筐体（ケース）の作り方](./howto_make_cover_ja.md)
 
 <img width="400px" src="images/body_idea.png">
 
