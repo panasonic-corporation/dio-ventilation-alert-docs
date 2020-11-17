@@ -127,3 +127,5 @@ USBケーブルを電源に差すと起動します。
     LEDは0〜599ppmで緑、
     LEDは600〜799ppmで黄色、
     LEDは800ppm以上で赤 に光ります。
+
+    <img width="300px" src="images/AtomEcho_SGP30/led.jpg">
